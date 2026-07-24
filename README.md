@@ -158,6 +158,5 @@ Paste di termux lalu setelahnya sesuaikan konfigurasi port dengan relay dan port
 git clone https://github.com/JustWazy/CreeperTunnel.git
 cd CreeperTunnel
 npm install dgram zlib
-node agent-target.js
 ```
-
+jalankan ```node agent-target.js```
