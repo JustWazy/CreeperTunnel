@@ -1,15 +1,8 @@
 # Minecraft Bedrock UDP Tunnel
 
-Tunnel UDP sederhana untuk **Minecraft Bedrock Dedicated Server** yang memungkinkan server berjalan di jaringan lokal (NAT/private network) tanpa perlu port forwarding.
-
 ![Node.js](https://img.shields.io/badge/Node.js-18+-green)
 ![Platform](https://img.shields.io/badge/platform-Termux%20%7C%20Node.js-orange)
-
-Dirancang untuk kebutuhan **self-hosting**, terutama ketika server dijalankan dari perangkat Android menggunakan Winlator.
-
-> Source:
-> - `relay-server.js` :contentReference[oaicite:0]{index=0}
-> - `agent-target.js` :contentReference[oaicite:1]{index=1}
+Tunnel UDP sederhana untuk **Minecraft Bedrock Dedicated Server** yang memungkinkan server berjalan di jaringan lokal (NAT/private network) tanpa perlu port forwarding.
 
 ---
 
