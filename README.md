@@ -148,15 +148,16 @@ Minecraft Bedrock Server (Winlator)
 ## Instalasi Relay
 
 1. Download relay files
-2. Upload ke hosting nodejs gratis
-3. Sesuaikan konfigurasi port pada script dengan port yang dibuka oleh hosting
+2. Install module zlib & dgram
+3. Upload ke hosting nodejs gratis
+4. Sesuaikan konfigurasi port pada script dengan port yang dibuka oleh hosting
 
 ## Instalasi Agent
 Paste di termux lalu setelahnya sesuaikan konfigurasi port dengan relay dan port yang menjalankan minecraft servr
 ```bash
 git clone https://github.com/JustWazy/CreeperTunnel.git
 cd CreeperTunnel
-npm install
+npm install dgram zlib
 node agent-target.js
 ```
 
