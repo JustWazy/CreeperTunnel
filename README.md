@@ -144,3 +144,22 @@ Minecraft Bedrock Server (Winlator)
     ▲
     └──────── kembali melalui tunnel
 ```
+# Setup
+## Instalasi Relay
+
+```bash
+git clone https://github.com/JustWazy/CreeperTunnel.git
+cd CreeperTunnel
+npm install
+node relay-server.js
+```
+
+## Instalasi Agent
+
+```bash
+git clone https://github.com/JustWazy/CreeperTunnel.git
+cd CreeperTunnel
+npm install
+node agent-target.js
+```
+
