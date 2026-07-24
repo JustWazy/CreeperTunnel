@@ -1,7 +1,9 @@
 # Minecraft Bedrock UDP Tunnel
 
 Tunnel UDP sederhana untuk **Minecraft Bedrock Dedicated Server** yang memungkinkan server berjalan di jaringan lokal (NAT/private network) tanpa perlu port forwarding.
-
+![Node.js](https://img.shields.io/badge/Node.js-18+-green)
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Platform](https://img.shields.io/badge/platform-Termux%20%7C%20Node.js-orange)
 Dirancang untuk kebutuhan **self-hosting**, terutama ketika server dijalankan dari perangkat Android menggunakan Winlator.
 
 > Source:
@@ -141,123 +143,3 @@ Minecraft Bedrock Server (Winlator)
     ▲
     └──────── kembali melalui tunnel
 ```
-
-# Instalasi
-
-## 1. Clone Repository
-
-```bash
-git clone https://github.com/JustWazy/CreeperTunnel.git
-```
-
-Masuk ke folder project.
-
-```bash
-cd CreeperTunnel
-```
-
-Install dependency.
-
-```bash
-npm install
-```
-
----
-
-# Menjalankan Relay
-
-```bash
-AUTH_KEY=rahasia \
-LISTEN_PORT=21115 \
-node relay-server.js
-```
-
----
-
-# Menjalankan Agent
-
-```bash
-RELAY_HOST=IP_RELAY \
-RELAY_PORT=21115 \
-TARGET_HOST=127.0.0.1 \
-TARGET_PORT=19132 \
-AUTH_KEY=rahasia \
-node agent-target.js
-```
-
----
-
-# Mengganti Port
-
-## Mengubah port Relay
-
-Misalnya ingin menggunakan port **30000**.
-
-### Relay
-
-```bash
-AUTH_KEY=rahasia \
-LISTEN_PORT=30000 \
-node relay-server.js
-```
-
-### Agent
-
-```bash
-RELAY_HOST=IP_RELAY \
-RELAY_PORT=30000 \
-TARGET_HOST=127.0.0.1 \
-TARGET_PORT=19132 \
-AUTH_KEY=rahasia \
-node agent-target.js
-```
-
-Player nantinya cukup masuk ke:
-
-```
-IP_RELAY:30000
-```
-
----
-
-## Mengubah port Minecraft
-
-Jika Bedrock Dedicated Server berjalan di port selain **19132**, cukup ubah:
-
-```bash
-TARGET_PORT=25000
-```
-
-Tidak perlu mengubah konfigurasi lainnya.
-
----
-
-# Konfigurasi
-
-## Relay
-
-| Variable | Fungsi |
-|----------|---------|
-| LISTEN_PORT | Port publik Relay |
-| LISTEN_HOST | Interface bind (`0.0.0.0`) |
-| AUTH_KEY | Password antara Relay dan Agent |
-
-## Agent
-
-| Variable | Fungsi |
-|----------|---------|
-| RELAY_HOST | IP atau Domain Relay |
-| RELAY_PORT | Port Relay |
-| LOCAL_PORT | Port lokal Agent (bebas, tidak harus sama dengan Relay) |
-| TARGET_HOST | IP Minecraft Server |
-| TARGET_PORT | Port Minecraft Server |
-| AUTH_KEY | Harus sama dengan Relay |
----
-
-# Keamanan
-
-Relay hanya menerima agent yang berhasil melakukan autentikasi menggunakan `AUTH_KEY`.
-
-Pastikan menggunakan `AUTH_KEY` yang kuat dan tidak dibagikan kepada pihak lain.
-
----
