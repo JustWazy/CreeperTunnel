@@ -261,7 +261,3 @@ Relay hanya menerima agent yang berhasil melakukan autentikasi menggunakan `AUTH
 Pastikan menggunakan `AUTH_KEY` yang kuat dan tidak dibagikan kepada pihak lain.
 
 ---
-
-# Lisensi
-
-MIT License
