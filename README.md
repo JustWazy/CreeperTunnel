@@ -147,15 +147,12 @@ Minecraft Bedrock Server (Winlator)
 # Setup
 ## Instalasi Relay
 
-```bash
-git clone https://github.com/JustWazy/CreeperTunnel.git
-cd CreeperTunnel
-npm install
-node relay-server.js
-```
+1. Download relay files
+2. Upload ke hosting nodejs gratis
+3. Sesuaikan konfigurasi port pada script dengan port yang dibuka oleh hosting
 
 ## Instalasi Agent
-
+Paste di termux lalu setelahnya sesuaikan konfigurasi port dengan relay dan port yang menjalankan minecraft servr
 ```bash
 git clone https://github.com/JustWazy/CreeperTunnel.git
 cd CreeperTunnel
